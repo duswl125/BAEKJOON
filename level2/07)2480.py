@@ -16,9 +16,10 @@
 a, b, c = map(int, input().split())
 if a == b == c:
     result = 10000 + a * 1000
-elif a == b or b == c or c == a:
-    pass
-    result = 1000 + 000000 * 100
 elif a != b and b != c and c != a:
     result = max(a, b, c) * 100
+else:
+    t = a + b + c - max(a, b, c) - min(a, b, c)
+    result = 1000 + t * 100
+
 print(result)
