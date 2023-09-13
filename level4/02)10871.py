@@ -9,3 +9,11 @@
 '''X보다 작은 수를 입력받은 순서대로 공백으로 구분해 출력한다. X보다 작은 수는 적어도 하나 존재한다.'''
 
 # 소스 코드
+import sys
+
+n, x = map(int, sys.stdin.readline().split())
+a = list(map(int, sys.stdin.readline().split()))
+
+for i in range(n):
+    if a[i] < x:
+        print(a[i], end=' ')
