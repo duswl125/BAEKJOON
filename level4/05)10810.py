@@ -14,6 +14,11 @@
 # 소스 코드
 n, m = map(int, input().split())
 
-for i in range(m):
-    i, j, k = map(int, input().split())
-    
+result = [0] * n
+
+for _ in range(m):
+    i, j, k = list(map(int, input().split()))
+    for t in range(i-1, j):
+        result[t] = k
+
+print(*result)
